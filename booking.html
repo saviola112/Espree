@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Book Cleaning - Espree</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+  </head>
+  <body class="bg-gray-50 p-10">
+    <h1 class="text-3xl font-bold mb-6">Book a Cleaning</h1>
+
+    <form id="bookingForm" class="space-y-4">
+      <input
+        type="text"
+        id="name"
+        placeholder="Full Name"
+        class="border p-3 w-full"
+        required
+      />
+      <input
+        type="email"
+        id="email"
+        placeholder="Email"
+        class="border p-3 w-full"
+        required
+      />
+
+      <select id="service" class="border p-3 w-full">
+        <option value="regular">Regular Cleaning</option>
+        <option value="deep">Deep Cleaning</option>
+        <option value="industrial">Industrial Cleaning</option>
+      </select>
+
+      <select id="property" class="border p-3 w-full">
+        <option value="15000">Studio</option>
+        <option value="20000">1 Bedroom</option>
+        <option value="25000">2 Bedroom</option>
+        <option value="30000">3 Bedroom</option>
+      </select>
+
+      <h2>Total: ₦<span id="total">15000</span></h2>
+
+      <button
+        type="button"
+        onclick="payNow()"
+        class="bg-blue-700 text-white px-6 py-3 rounded"
+      >
+        Pay 70% & Book
+      </button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
