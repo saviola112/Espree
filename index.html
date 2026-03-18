@@ -17,9 +17,9 @@
       <div
         class="max-w-7xl mx-auto px-8 py-3 flex items-center justify-between"
       >
-        <div class="tracking-[0.08em] uppercase text-[11px] text-slate-300">
-          Tech-enabled premium cleaning solutions
-        </div>
+        <div
+          class="tracking-[0.08em] uppercase text-[11px] text-slate-300"
+        ></div>
 
         <div class="flex items-center gap-8">
           <a
@@ -56,7 +56,7 @@
       >
         <a href="index.html" class="flex items-center gap-4">
           <img
-            src="assets/espree-logo.png"
+            src="./assets/espree-logo.png"
             alt="Espree Cleaning Services Logo"
             class="h-20 w-auto object-contain"
           />
@@ -97,7 +97,7 @@
       <!-- background image -->
       <div class="absolute inset-0">
         <img
-          src="assets/deep.jpg"
+          src="./assets/chat.deep.png"
           alt="Espree premium cleaning service"
           class="w-full h-full object-cover scale-[1.03]"
         />
@@ -134,9 +134,9 @@
             </h1>
 
             <p class="mt-8 text-xl text-slate-200/95 leading-9 max-w-2xl">
-              Espree delivers a tech-enabled cleaning experience designed for
-              modern homes, offices and facilities — structured, seamless and
-              executed to a higher standard.
+              Espree delivers a cleaning experience designed for modern homes,
+              offices and facilities — structured, seamless and executed to a
+              higher standard.
             </p>
 
             <div class="mt-10 flex items-center gap-5">
@@ -351,7 +351,7 @@
           >
             <div class="h-80 overflow-hidden">
               <img
-                src="assets/regular.jpg"
+                src="./assets/Regular.png"
                 alt="Regular cleaning"
                 class="w-full h-full object-cover group-hover:scale-105 transition duration-700"
               />
@@ -372,7 +372,7 @@
           >
             <div class="h-80 overflow-hidden">
               <img
-                src="assets/deep.jpg"
+                src="./assets/Deep.png"
                 alt="Deep cleaning"
                 class="w-full h-full object-cover group-hover:scale-105 transition duration-700"
               />
@@ -391,7 +391,7 @@
           >
             <div class="h-80 overflow-hidden">
               <img
-                src="assets/industrial.jpg"
+                src="./assets/CHatgpt. industrial.png"
                 alt="Industrial cleaning"
                 class="w-full h-full object-cover group-hover:scale-105 transition duration-700"
               />
@@ -475,11 +475,31 @@
               class="absolute -bottom-8 -left-6 w-28 h-28 rounded-[24px] bg-[#081a36]"
             ></div>
 
-            <img
-              src="assets/deep.jpg"
-              alt="Espree premium cleaning"
-              class="relative z-10 w-full h-[680px] object-cover rounded-[38px] shadow-[0_30px_80px_rgba(8,26,54,0.16)]"
-            />
+            <div class="relative w-full h-[500px] overflow-hidden rounded-2xl">
+              <!-- SLIDER TRACK -->
+              <div
+                id="slider"
+                class="flex h-full transition-transform duration-700 ease-in-out"
+              >
+                <img
+                  src="./assets/IMG_9383.JPG"
+                  class="w-full h-full object-cover flex-shrink-0"
+                />
+                <img
+                  src="./assets/Chatmopand bucket.png"
+                  class="w-full h-full object-cover flex-shrink-0"
+                />
+                <img
+                  src="./assets/espree-logo.png"
+                  class="w-full h-full object-cover flex-shrink-0"
+                />
+              </div>
+
+              <!-- OPTIONAL OVERLAY FOR PREMIUM LOOK -->
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"
+              ></div>
+            </div>
           </div>
         </div>
       </div>
@@ -527,7 +547,7 @@
       <div class="max-w-7xl mx-auto px-8 grid grid-cols-4 gap-10">
         <div>
           <img
-            src="assets/espree-logo.png"
+            src="./assets/espree-logo.png"
             alt="Espree logo"
             class="h-16 w-auto object-contain mb-4"
           />
@@ -583,7 +603,7 @@
           <div class="space-y-3 text-sm text-slate-300">
             <p>WhatsApp: +234 708 988 6767</p>
             <p>Call: 09064747465</p>
-            <p>Email: espree@gmail.com</p>
+            <p>Email: espree_cleaning@gmail.com</p>
             <p>Lagos, Nigeria</p>
           </div>
         </div>
@@ -596,5 +616,24 @@
         <p>Built for premium service experiences.</p>
       </div>
     </footer>
+
+    <script>
+      const slider = document.getElementById("slider");
+      const slides = slider.children;
+      let index = 0;
+
+      function showNextSlide() {
+        index++;
+
+        if (index >= slides.length) {
+          index = 0;
+        }
+
+        slider.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      // auto scroll every 4 seconds
+      setInterval(showNextSlide, 4000);
+    </script>
   </body>
 </html>
