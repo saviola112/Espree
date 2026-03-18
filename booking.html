@@ -1,53 +1,306 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <title>Book Cleaning - Espree</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Book a cleaning service with Espree. Choose your service, schedule and confirm your booking."
+    />
+    <title>Book a Service | Espree Cleaning Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://js.paystack.co/v1/inline.js"></script>
   </head>
-  <body class="bg-gray-50 p-10">
-    <h1 class="text-3xl font-bold mb-6">Book a Cleaning</h1>
 
-    <form id="bookingForm" class="space-y-4">
-      <input
-        type="text"
-        id="name"
-        placeholder="Full Name"
-        class="border p-3 w-full"
-        required
-      />
-      <input
-        type="email"
-        id="email"
-        placeholder="Email"
-        class="border p-3 w-full"
-        required
-      />
+  <body class="bg-[#f3f6fb] text-slate-900">
+    <!-- TOP BAR -->
+    <div class="bg-[#081a36] text-white text-sm border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-8 py-3 flex justify-between">
+        <span class="uppercase text-xs tracking-widest text-slate-300">
+          Cleaning services across Lagos
+        </span>
 
-      <select id="service" class="border p-3 w-full">
-        <option value="regular">Regular Cleaning</option>
-        <option value="deep">Deep Cleaning</option>
-        <option value="industrial">Industrial Cleaning</option>
-      </select>
+        <div class="flex gap-6">
+          <a
+            href="https://wa.me/2347089886767"
+            target="_blank"
+            class="text-green-400"
+          >
+            WhatsApp +234 708 988 6767
+          </a>
+          <a href="tel:09064747465">Call 09064747465</a>
+        </div>
+      </div>
+    </div>
 
-      <select id="property" class="border p-3 w-full">
-        <option value="15000">Studio</option>
-        <option value="20000">1 Bedroom</option>
-        <option value="25000">2 Bedroom</option>
-        <option value="30000">3 Bedroom</option>
-      </select>
-
-      <h2>Total: ₦<span id="total">15000</span></h2>
-
-      <button
-        type="button"
-        onclick="payNow()"
-        class="bg-blue-700 text-white px-6 py-3 rounded"
+    <!-- NAV -->
+    <nav class="sticky top-0 bg-white/80 backdrop-blur-xl border-b z-50">
+      <div
+        class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center"
       >
-        Pay 70% & Book
-      </button>
-    </form>
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/espree-logo.png" class="h-16" alt="Espree logo" />
+          <div class="font-bold text-[#081a36]">Espree Cleaning</div>
+        </a>
 
-    <script src="script.js"></script>
+        <div class="flex gap-6 font-semibold">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html">About</a>
+          <a href="terms.html">Terms</a>
+          <a href="booking.html" class="text-[#081a36]">Book</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="bg-[#081a36] text-white py-20">
+      <div class="max-w-4xl mx-auto px-8 text-center">
+        <p class="uppercase text-sm tracking-widest text-[#b8cdf4]">Booking</p>
+
+        <h1 class="mt-5 text-[56px] font-black leading-tight">
+          Schedule your cleaning service
+        </h1>
+
+        <p class="mt-5 text-lg text-slate-300">
+          Fill in your details and select your service. We’ll handle the rest.
+        </p>
+      </div>
+    </section>
+
+    <!-- FORM SECTION -->
+    <section class="py-24">
+      <div class="max-w-5xl mx-auto px-8">
+        <div
+          class="bg-white rounded-[30px] shadow-[0_20px_60px_rgba(15,23,42,0.08)] p-10"
+        >
+          <h2 class="text-2xl font-bold text-[#081a36]">Service Details</h2>
+
+          <form id="bookingForm" class="mt-8 space-y-6">
+            <div>
+              <label for="fullName" class="block text-sm font-semibold mb-2"
+                >Full Name</label
+              >
+              <input
+                id="fullName"
+                type="text"
+                required
+                class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#081a36]"
+              />
+            </div>
+
+            <div>
+              <label for="phone" class="block text-sm font-semibold mb-2"
+                >Phone Number</label
+              >
+              <input
+                id="phone"
+                type="tel"
+                required
+                class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#081a36]"
+              />
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-semibold mb-2"
+                >Email Address</label
+              >
+              <input
+                id="email"
+                type="email"
+                required
+                class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#081a36]"
+              />
+            </div>
+
+            <div>
+              <label for="service" class="block text-sm font-semibold mb-2"
+                >Select Service</label
+              >
+              <select
+                id="service"
+                class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#081a36]"
+              >
+                <option>Regular Cleaning</option>
+                <option>Deep Cleaning</option>
+                <option>Industrial Cleaning</option>
+                <option>Move-In / Move-Out Cleaning</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="date" class="block text-sm font-semibold mb-2"
+                >Preferred Date</label
+              >
+              <input
+                id="date"
+                type="date"
+                required
+                class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#081a36]"
+              />
+            </div>
+
+            <div>
+              <label for="address" class="block text-sm font-semibold mb-2"
+                >Location / Address</label
+              >
+              <textarea
+                id="address"
+                rows="3"
+                required
+                class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#081a36]"
+              ></textarea>
+            </div>
+
+            <div>
+              <label for="notes" class="block text-sm font-semibold mb-2"
+                >Additional Details</label
+              >
+              <textarea
+                id="notes"
+                rows="3"
+                class="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#081a36]"
+              ></textarea>
+            </div>
+
+            <button
+              id="submitBtn"
+              type="submit"
+              class="w-full bg-[#081a36] text-white py-4 rounded-full font-bold hover:bg-[#102a57] transition"
+            >
+              Submit Booking
+            </button>
+          </form>
+
+          <!-- SUCCESS MESSAGE -->
+          <div id="successMessage" class="hidden mt-8 text-center">
+            <div class="text-green-500 text-5xl">✔</div>
+            <h3 class="mt-4 text-xl font-bold text-[#081a36]">
+              Booking Submitted
+            </h3>
+            <p class="mt-2 text-slate-600">
+              Your request has been received. We will contact you shortly.
+            </p>
+          </div>
+
+          <!-- ERROR MESSAGE -->
+          <div id="errorMessage" class="hidden mt-8 text-center">
+            <h3 class="text-xl font-bold text-red-600">Something went wrong</h3>
+            <p class="mt-2 text-slate-600">Please try again.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAYMENT NOTE -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-8 text-center">
+        <h2 class="text-3xl font-bold text-[#081a36]">Payment Process</h2>
+
+        <p class="mt-4 text-slate-600">
+          After booking, you will be directed to complete a 70% deposit to
+          confirm your service. The balance is paid after completion.
+        </p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#061224] text-white pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-8 grid grid-cols-4 gap-8">
+        <div>
+          <img
+            src="assets/espree-logo.png"
+            class="h-14 mb-4"
+            alt="Espree logo"
+          />
+          <p class="text-sm text-slate-300">
+            Cleaning services for homes, offices and industrial spaces.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4">Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="booking.html">Book</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4">Services</h4>
+          <ul class="space-y-2 text-sm">
+            <li>Regular Cleaning</li>
+            <li>Deep Cleaning</li>
+            <li>Industrial Cleaning</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4">Contact</h4>
+          <p class="text-sm">WhatsApp: +234 708 988 6767</p>
+          <p class="text-sm">Call: 09064747465</p>
+          <p class="text-sm">Email: espree@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-10 text-sm text-slate-400">
+        © 2026 Espree Cleaning Services
+      </div>
+    </footer>
+
+    <script>
+      const bookingForm = document.getElementById("bookingForm");
+      const successMessage = document.getElementById("successMessage");
+      const errorMessage = document.getElementById("errorMessage");
+      const submitBtn = document.getElementById("submitBtn");
+
+      bookingForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        errorMessage.classList.add("hidden");
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+
+        const bookingData = {
+          fullName: document.getElementById("fullName").value,
+          phone: document.getElementById("phone").value,
+          email: document.getElementById("email").value,
+          service: document.getElementById("service").value,
+          date: document.getElementById("date").value,
+          address: document.getElementById("address").value,
+          notes: document.getElementById("notes").value,
+        };
+
+        try {
+          const response = await fetch("/api/sendBooking", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(bookingData),
+          });
+
+          const result = await response.json();
+
+          if (response.ok) {
+            bookingForm.classList.add("hidden");
+            successMessage.classList.remove("hidden");
+
+            setTimeout(() => {
+              window.location.href = "payment.html";
+            }, 2000);
+          } else {
+            throw new Error(result.message || "Failed to send booking.");
+          }
+        } catch (error) {
+          console.error(error);
+          errorMessage.classList.remove("hidden");
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Submit Booking";
+        }
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Complete your payment for your Espree cleaning service booking."
+    />
+    <title>Payment | Espree Cleaning Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-[#f3f6fb] text-slate-900">
+    <!-- TOP BAR -->
+    <div class="bg-[#081a36] text-white text-sm border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-8 py-3 flex justify-between">
+        <span class="uppercase text-xs tracking-widest text-slate-300">
+          Cleaning services across Lagos
+        </span>
+
+        <div class="flex gap-6">
+          <a
+            href="https://wa.me/2347089886767"
+            target="_blank"
+            class="text-green-400"
+          >
+            WhatsApp +234 708 988 6767
+          </a>
+          <a href="tel:09064747465">Call 09064747465</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAV -->
+    <nav class="sticky top-0 bg-white/80 backdrop-blur-xl border-b z-50">
+      <div
+        class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center"
+      >
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/espree-logo.png" class="h-16" alt="Espree logo" />
+          <div class="font-bold text-[#081a36]">Espree Cleaning</div>
+        </a>
+
+        <div class="flex gap-6 font-semibold">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html">About</a>
+          <a href="terms.html">Terms</a>
+          <a href="booking.html">Book</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="bg-[#081a36] text-white py-20">
+      <div class="max-w-4xl mx-auto px-8 text-center">
+        <p class="uppercase text-sm tracking-widest text-[#b8cdf4]">Payment</p>
+
+        <h1 class="mt-5 text-[56px] font-black leading-tight">
+          Confirm your booking
+        </h1>
+
+        <p class="mt-5 text-lg text-slate-300">
+          Review your service details and proceed with the required deposit.
+        </p>
+      </div>
+    </section>
+
+    <!-- PAYMENT CONTENT -->
+    <section class="py-24">
+      <div class="max-w-6xl mx-auto px-8 grid grid-cols-2 gap-10">
+        <!-- LEFT SIDE: SUMMARY -->
+        <div
+          class="bg-white rounded-[30px] p-10 shadow-[0_20px_60px_rgba(15,23,42,0.08)]"
+        >
+          <h2 class="text-2xl font-bold text-[#081a36]">Booking Summary</h2>
+
+          <div class="mt-8 space-y-6 text-slate-700">
+            <div class="flex justify-between border-b pb-4">
+              <span>Service</span>
+              <span class="font-semibold">Deep Cleaning</span>
+            </div>
+
+            <div class="flex justify-between border-b pb-4">
+              <span>Booking Date</span>
+              <span class="font-semibold">Selected Date</span>
+            </div>
+
+            <div class="flex justify-between border-b pb-4">
+              <span>Location</span>
+              <span class="font-semibold">Client Address</span>
+            </div>
+
+            <div class="flex justify-between border-b pb-4">
+              <span>Total Service Cost</span>
+              <span class="font-semibold">₦45,000</span>
+            </div>
+
+            <div class="flex justify-between border-b pb-4">
+              <span>Deposit Required</span>
+              <span class="font-semibold text-[#081a36]">₦31,500</span>
+            </div>
+
+            <div class="flex justify-between">
+              <span>Balance After Service</span>
+              <span class="font-semibold text-slate-500">₦13,500</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE: PAYMENT ACTION -->
+        <div
+          class="bg-white rounded-[30px] p-10 shadow-[0_20px_60px_rgba(15,23,42,0.08)]"
+        >
+          <h2 class="text-2xl font-bold text-[#081a36]">Payment Details</h2>
+
+          <p class="mt-5 text-slate-600 leading-8">
+            To confirm your booking, a 70% deposit is required. Once payment is
+            completed, your service slot is secured and the remaining balance
+            will be settled after delivery.
+          </p>
+
+          <div class="mt-8 bg-[#f3f6fb] rounded-2xl p-6">
+            <div class="text-sm uppercase tracking-widest text-slate-500">
+              Amount to Pay
+            </div>
+            <div class="mt-3 text-4xl font-black text-[#081a36]">₦31,500</div>
+          </div>
+
+          <div class="mt-8 space-y-4 text-sm text-slate-600">
+            <p>✔ Deposit confirms your booking</p>
+            <p>✔ Remaining balance is paid after service completion</p>
+            <p>✔ Payment gateway integration will be added in the next phase</p>
+          </div>
+
+          <button
+            onclick="handlePayment()"
+            class="mt-10 w-full bg-[#081a36] text-white py-4 rounded-full font-bold hover:bg-[#102a57] transition"
+          >
+            Proceed to Payment
+          </button>
+
+          <!-- SUCCESS STATE -->
+          <div id="paymentSuccess" class="hidden mt-10 text-center">
+            <div class="text-green-500 text-5xl">✔</div>
+            <h3 class="mt-4 text-xl font-bold text-[#081a36]">
+              Payment Confirmed
+            </h3>
+            <p class="mt-2 text-slate-600">
+              Your booking has been confirmed successfully.
+            </p>
+
+            <a
+              href="index.html"
+              class="mt-6 inline-block bg-[#081a36] text-white px-6 py-3 rounded-full"
+            >
+              Return Home
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#061224] text-white pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-8 grid grid-cols-4 gap-8">
+        <div>
+          <img
+            src="assets/espree-logo.png"
+            class="h-14 mb-4"
+            alt="Espree logo"
+          />
+          <p class="text-sm text-slate-300">
+            Cleaning services for homes, offices and industrial spaces.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4">Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="booking.html">Book</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4">Services</h4>
+          <ul class="space-y-2 text-sm">
+            <li>Regular Cleaning</li>
+            <li>Deep Cleaning</li>
+            <li>Industrial Cleaning</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4">Contact</h4>
+          <p class="text-sm">WhatsApp: +234 708 988 6767</p>
+          <p class="text-sm">Call: 09064747465</p>
+          <p class="text-sm">Email: espree@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-10 text-sm text-slate-400">
+        © 2026 Espree Cleaning Services
+      </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+      function handlePayment() {
+        document.querySelector("button").style.display = "none";
+        document.getElementById("paymentSuccess").classList.remove("hidden");
+      }
+    </script>
+  </body>
+</html>

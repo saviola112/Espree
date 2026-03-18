@@ -1,0 +1,24 @@
+{
+  "name": "espree-cleaning-services",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saviola112/Espree.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/saviola112/Espree/issues"
+  },
+  "homepage": "https://github.com/saviola112/Espree#readme",
+  "dependencies": {
+    "nodemailer": "^8.0.2"
+  }
+}

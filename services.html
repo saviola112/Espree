@@ -1,43 +1,565 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <title>Our Services - Espree</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore Espree Cleaning Services including regular cleaning, deep cleaning, industrial cleaning, office cleaning and more."
+    />
+    <title>Services | Espree Cleaning Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body class="bg-gray-50">
-    <nav class="bg-white shadow-md px-10 py-4 flex justify-between">
-      <a href="index.html" class="flex items-center">
-        <img
-          src="./assets/espree logo.png"
-          alt="Espree Cleaning Services Logo"
-          class="h-24 w-auto object-contain hover:opacity-90 transition"
-        />
-      </a>
-      <a href="booking.html" class="bg-blue-600 text-white px-6 py-3 rounded-lg"
-        >Book Now</a
+  <body class="bg-[#f3f6fb] text-slate-900">
+    <!-- TOP CONTACT BAR -->
+    <div class="bg-[#081a36] text-white text-sm border-b border-white/10">
+      <div
+        class="max-w-7xl mx-auto px-8 py-3 flex items-center justify-between"
       >
+        <div class="tracking-[0.08em] uppercase text-[11px] text-slate-300">
+          Tech-enabled premium cleaning solutions
+        </div>
+
+        <div class="flex items-center gap-8">
+          <a
+            href="https://wa.me/2347089886767"
+            target="_blank"
+            class="flex items-center gap-2 hover:text-green-300 transition"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+              class="w-5 h-5 text-[#25D366]"
+              fill="currentColor"
+            >
+              <path
+                d="M16 .4C7.4.4.4 7.4.4 16c0 2.8.7 5.5 2.1 7.9L0 32l8.3-2.2c2.3 1.2 4.9 1.8 7.7 1.8 8.6 0 15.6-7 15.6-15.6S24.6.4 16 .4zm0 28.5c-2.4 0-4.7-.6-6.8-1.7l-.5-.3-4.9 1.3 1.3-4.8-.3-.5c-1.2-2.1-1.8-4.5-1.8-6.9C3 8.3 8.3 3 16 3s13 5.3 13 13-5.3 12.9-13 12.9z"
+              />
+            </svg>
+            <span>WhatsApp +234 708 988 6767</span>
+          </a>
+
+          <a href="tel:09064747465" class="hover:text-slate-300 transition">
+            📞 Call 09064747465
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav
+      class="sticky top-0 z-50 bg-white/75 backdrop-blur-xl border-b border-slate-200/70"
+    >
+      <div
+        class="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between"
+      >
+        <a href="index.html" class="flex items-center gap-4">
+          <img
+            src="assets/espree-logo.png"
+            alt="Espree Cleaning Services Logo"
+            class="h-20 w-auto object-contain"
+          />
+          <div class="hidden lg:block">
+            <div class="text-xl font-bold text-[#081a36] leading-tight">
+              Espree Cleaning
+            </div>
+            <div class="text-sm text-slate-500">
+              Premium service. Smarter execution.
+            </div>
+          </div>
+        </a>
+
+        <div
+          class="flex items-center gap-8 text-[15px] font-semibold text-slate-700"
+        >
+          <a href="index.html" class="hover:text-[#081a36] transition">Home</a>
+          <a href="services.html" class="text-[#081a36]">Services</a>
+          <a href="pricing.html" class="hover:text-[#081a36] transition"
+            >Pricing</a
+          >
+          <a href="about.html" class="hover:text-[#081a36] transition">About</a>
+          <a href="terms.html" class="hover:text-[#081a36] transition">Terms</a>
+          <a
+            href="booking.html"
+            class="bg-[#081a36] text-white px-6 py-3 rounded-full hover:bg-[#102a57] transition shadow-[0_10px_30px_rgba(8,26,54,0.18)]"
+          >
+            Book Now
+          </a>
+        </div>
+      </div>
     </nav>
 
-    <section class="py-20 px-16">
-      <h1 class="text-4xl font-bold mb-12">Our Services</h1>
+    <!-- HERO -->
+    <section class="relative overflow-hidden bg-[#081a36] text-white">
+      <div class="absolute inset-0">
+        <div
+          class="absolute -top-12 right-12 w-[380px] h-[380px] rounded-full bg-[#7aa7ff]/10 blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-0 left-0 w-[420px] h-[420px] rounded-full bg-white/5 blur-3xl"
+        ></div>
+      </div>
 
-      <h2 class="text-2xl font-semibold mb-4">Regular Cleaning</h2>
-      <p class="mb-8">
-        Dusting, mopping, vacuuming, kitchen & bathroom cleaning.
-      </p>
-
-      <h2 class="text-2xl font-semibold mb-4">Deep Cleaning</h2>
-      <p class="mb-8">
-        Wall stain removal, appliance cleaning, detailed scrubbing.
-      </p>
-
-      <h2 class="text-2xl font-semibold mb-4">Industrial Cleaning</h2>
-      <p>Post-construction, warehouses, commercial sanitation.</p>
+      <div class="relative max-w-7xl mx-auto px-8 py-24">
+        <div class="max-w-4xl">
+          <p
+            class="text-[#b8cdf4] uppercase tracking-[0.22em] text-sm font-bold"
+          >
+            Our Services
+          </p>
+          <h1
+            class="mt-5 text-[68px] leading-[0.98] font-black tracking-[-0.04em]"
+          >
+            Cleaning solutions
+            <span class="text-slate-300">designed for</span>
+            modern homes, teams and facilities.
+          </h1>
+          <p class="mt-7 text-xl text-slate-200 leading-9 max-w-3xl">
+            From routine home maintenance to deep sanitation and
+            industrial-level cleaning, Espree provides structured services built
+            around quality, speed and professionalism.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <footer class="bg-blue-900 text-white text-center py-8">
-      © 2026 Espree Cleaning Services.
+    <!-- SERVICE INTRO -->
+    <section class="relative -mt-10 z-20">
+      <div class="max-w-7xl mx-auto px-8">
+        <div
+          class="bg-white/90 backdrop-blur-xl rounded-[30px] border border-slate-200 shadow-[0_18px_50px_rgba(15,23,42,0.08)] p-10 grid grid-cols-3 gap-8"
+        >
+          <div>
+            <div class="text-lg font-bold text-[#081a36]">
+              Residential Cleaning
+            </div>
+            <p class="mt-2 text-slate-500 leading-7">
+              Routine and detailed cleaning solutions for apartments, homes and
+              private residences.
+            </p>
+          </div>
+          <div>
+            <div class="text-lg font-bold text-[#081a36]">
+              Commercial Cleaning
+            </div>
+            <p class="mt-2 text-slate-500 leading-7">
+              Reliable service delivery for offices, retail spaces and business
+              environments.
+            </p>
+          </div>
+          <div>
+            <div class="text-lg font-bold text-[#081a36]">
+              Industrial Cleaning
+            </div>
+            <p class="mt-2 text-slate-500 leading-7">
+              Structured execution for warehouses, large facilities and
+              post-construction sites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED SERVICES -->
+    <section class="pt-28 pb-24">
+      <div class="max-w-7xl mx-auto px-8 space-y-16">
+        <!-- Regular Cleaning -->
+        <div class="grid grid-cols-12 gap-10 items-center">
+          <div class="col-span-6">
+            <div
+              class="rounded-[34px] overflow-hidden shadow-[0_25px_60px_rgba(8,26,54,0.12)]"
+            >
+              <img
+                src="assets/regular.jpg"
+                alt="Regular Cleaning"
+                class="w-full h-[520px] object-cover"
+              />
+            </div>
+          </div>
+
+          <div class="col-span-6">
+            <p
+              class="text-[#355da8] uppercase tracking-[0.22em] text-sm font-bold"
+            >
+              01 — Regular Cleaning
+            </p>
+            <h2
+              class="mt-4 text-[52px] leading-[1.02] font-black tracking-[-0.03em] text-[#081a36]"
+            >
+              Consistent upkeep for spaces that need to stay polished.
+            </h2>
+            <p class="mt-6 text-lg text-slate-600 leading-8">
+              Our regular cleaning service is ideal for homes and offices that
+              require ongoing maintenance. It is designed to keep your
+              environment neat, fresh and consistently presentable.
+            </p>
+
+            <div class="mt-8 grid grid-cols-2 gap-4">
+              <div
+                class="rounded-2xl bg-white border border-slate-200 px-5 py-4 text-slate-700"
+              >
+                Dusting & surface cleaning
+              </div>
+              <div
+                class="rounded-2xl bg-white border border-slate-200 px-5 py-4 text-slate-700"
+              >
+                Bathroom and kitchen touch-up
+              </div>
+              <div
+                class="rounded-2xl bg-white border border-slate-200 px-5 py-4 text-slate-700"
+              >
+                Sweeping, mopping & vacuuming
+              </div>
+              <div
+                class="rounded-2xl bg-white border border-slate-200 px-5 py-4 text-slate-700"
+              >
+                Routine maintenance support
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deep Cleaning -->
+        <div class="grid grid-cols-12 gap-10 items-center">
+          <div class="col-span-6 order-2">
+            <div
+              class="rounded-[34px] overflow-hidden shadow-[0_25px_60px_rgba(8,26,54,0.12)]"
+            >
+              <img
+                src="assets/deep.jpg"
+                alt="Deep Cleaning"
+                class="w-full h-[520px] object-cover"
+              />
+            </div>
+          </div>
+
+          <div class="col-span-6 order-1">
+            <p
+              class="text-[#355da8] uppercase tracking-[0.22em] text-sm font-bold"
+            >
+              02 — Deep Cleaning
+            </p>
+            <h2
+              class="mt-4 text-[52px] leading-[1.02] font-black tracking-[-0.03em] text-[#081a36]"
+            >
+              Intensive cleaning for spaces that need a complete reset.
+            </h2>
+            <p class="mt-6 text-lg text-slate-600 leading-8">
+              Deep cleaning goes beyond the surface. It is ideal for spaces with
+              buildup, hidden dirt, neglected corners or a need for a more
+              detailed level of care and sanitation.
+            </p>
+
+            <div class="mt-8 grid grid-cols-2 gap-4">
+              <div
+                class="rounded-2xl bg-white border border-slate-200 px-5 py-4 text-slate-700"
+              >
+                Detailed bathroom sanitation
+              </div>
+              <div
+                class="rounded-2xl bg-white border border-slate-200 px-5 py-4 text-slate-700"
+              >
+                Kitchen grease and buildup removal
+              </div>
+              <div
+                class="rounded-2xl bg-white border border-slate-200 px-5 py-4 text-slate-700"
+              >
+                Hidden areas and corners addressed
+              </div>
+              <div
+                class="rounded-2xl bg-white border border-slate-200 px-5 py-4 text-slate-700"
+              >
+                Best for seasonal or first-time cleaning
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Move In / Move Out -->
+        <div class="grid grid-cols-12 gap-10 items-center">
+          <div class="col-span-6">
+            <div
+              class="rounded-[34px] overflow-hidden shadow-[0_25px_60px_rgba(8,26,54,0.12)] bg-[#dbe7ff] flex items-center justify-center h-[520px]"
+            >
+              <div class="text-center px-12">
+                <div
+                  class="text-[#081a36] text-[20px] uppercase tracking-[0.2em] font-bold"
+                >
+                  Move-In / Move-Out
+                </div>
+                <div
+                  class="mt-6 text-[#081a36] text-[52px] leading-[1.02] font-black tracking-[-0.03em]"
+                >
+                  For transitions that require a clean start.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-span-6">
+            <p
+              class="text-[#355da8] uppercase tracking-[0.22em] text-sm font-bold"
+            >
+              03 — Move-In / Move-Out Cleaning
+            </p>
+            <h2
+              class="mt-4 text-[52px] leading-[1.02] font-black tracking-[-0.03em] text-[#081a36]"
+            >
+              Cleaning support for property handovers and fresh occupancy.
+            </h2>
+            <p class="mt-6 text-lg text-slate-600 leading-8">
+              Whether you’re moving into a new space or preparing one for
+              handover, this service ensures the environment is thoroughly
+              cleaned and ready for use.
+            </p>
+
+            <div class="mt-8 grid grid-cols-2 gap-4">
+              <div
+                class="rounded-2xl bg-white border border-slate-200 px-5 py-4 text-slate-700"
+              >
+                Ideal for tenants and landlords
+              </div>
+              <div
+                class="rounded-2xl bg-white border border-slate-200 px-5 py-4 text-slate-700"
+              >
+                Great for property managers
+              </div>
+              <div
+                class="rounded-2xl bg-white border border-slate-200 px-5 py-4 text-slate-700"
+              >
+                Prepared for immediate occupancy
+              </div>
+              <div
+                class="rounded-2xl bg-white border border-slate-200 px-5 py-4 text-slate-700"
+              >
+                Best for clean transitions
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Industrial Cleaning -->
+        <div class="grid grid-cols-12 gap-10 items-center">
+          <div class="col-span-6 order-2">
+            <div
+              class="rounded-[34px] overflow-hidden shadow-[0_25px_60px_rgba(8,26,54,0.12)]"
+            >
+              <img
+                src="assets/industrial.jpg"
+                alt="Industrial Cleaning"
+                class="w-full h-[520px] object-cover"
+              />
+            </div>
+          </div>
+
+          <div class="col-span-6 order-1">
+            <p
+              class="text-[#355da8] uppercase tracking-[0.22em] text-sm font-bold"
+            >
+              04 — Industrial Cleaning
+            </p>
+            <h2
+              class="mt-4 text-[52px] leading-[1.02] font-black tracking-[-0.03em] text-[#081a36]"
+            >
+              Structured cleaning for larger, more demanding environments.
+            </h2>
+            <p class="mt-6 text-lg text-slate-600 leading-8">
+              Our industrial cleaning service is tailored for warehouses, large
+              commercial spaces, post-construction sites and facilities that
+              require organized, large-scale cleaning support.
+            </p>
+
+            <div class="mt-8 grid grid-cols-2 gap-4">
+              <div
+                class="rounded-2xl bg-white border border-slate-200 px-5 py-4 text-slate-700"
+              >
+                Warehouse cleaning
+              </div>
+              <div
+                class="rounded-2xl bg-white border border-slate-200 px-5 py-4 text-slate-700"
+              >
+                Facility cleaning
+              </div>
+              <div
+                class="rounded-2xl bg-white border border-slate-200 px-5 py-4 text-slate-700"
+              >
+                Post-construction support
+              </div>
+              <div
+                class="rounded-2xl bg-white border border-slate-200 px-5 py-4 text-slate-700"
+              >
+                Large-scale service delivery
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXTENDED SERVICES LIST -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="max-w-3xl">
+          <p
+            class="text-[#355da8] uppercase tracking-[0.22em] text-sm font-bold"
+          >
+            Additional Coverage
+          </p>
+          <h2
+            class="mt-4 text-[54px] leading-[1.02] font-black tracking-[-0.03em] text-[#081a36]"
+          >
+            More ways we support cleaner spaces
+          </h2>
+        </div>
+
+        <div class="mt-14 grid grid-cols-3 gap-6">
+          <div
+            class="rounded-2xl bg-[#f7f9fd] border border-slate-200 px-6 py-5 text-lg font-semibold text-[#081a36]"
+          >
+            Office Cleaning
+          </div>
+          <div
+            class="rounded-2xl bg-[#f7f9fd] border border-slate-200 px-6 py-5 text-lg font-semibold text-[#081a36]"
+          >
+            Medical Facility Cleaning
+          </div>
+          <div
+            class="rounded-2xl bg-[#f7f9fd] border border-slate-200 px-6 py-5 text-lg font-semibold text-[#081a36]"
+          >
+            Retail Space Cleaning
+          </div>
+          <div
+            class="rounded-2xl bg-[#f7f9fd] border border-slate-200 px-6 py-5 text-lg font-semibold text-[#081a36]"
+          >
+            Post Construction Cleaning
+          </div>
+          <div
+            class="rounded-2xl bg-[#f7f9fd] border border-slate-200 px-6 py-5 text-lg font-semibold text-[#081a36]"
+          >
+            Window Cleaning
+          </div>
+          <div
+            class="rounded-2xl bg-[#f7f9fd] border border-slate-200 px-6 py-5 text-lg font-semibold text-[#081a36]"
+          >
+            Carpet & Upholstery Cleaning
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 bg-[#081a36] text-white relative overflow-hidden">
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(122,167,255,0.16),transparent_35%)]"
+      ></div>
+
+      <div class="relative max-w-5xl mx-auto px-8 text-center">
+        <p class="uppercase tracking-[0.22em] text-sm font-bold text-[#b9cdf7]">
+          Need the right service?
+        </p>
+        <h2
+          class="mt-5 text-[56px] leading-[1.02] font-black tracking-[-0.03em]"
+        >
+          Let’s match your space
+          <span class="text-slate-300">with the right cleaning solution.</span>
+        </h2>
+        <p class="mt-6 text-lg text-slate-300 leading-8 max-w-3xl mx-auto">
+          Whether you need routine maintenance, detailed sanitation or
+          industrial-level support, Espree is ready to deliver with precision
+          and professionalism.
+        </p>
+
+        <div class="mt-10 flex items-center justify-center gap-5">
+          <a
+            href="booking.html"
+            class="bg-white text-[#081a36] px-8 py-4 rounded-full font-bold hover:bg-slate-100 transition"
+          >
+            Book Now
+          </a>
+          <a
+            href="pricing.html"
+            class="border border-white/30 text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-[#081a36] transition"
+          >
+            View Pricing
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#061224] text-white pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-8 grid grid-cols-4 gap-10">
+        <div>
+          <img
+            src="assets/espree-logo.png"
+            alt="Espree logo"
+            class="h-16 w-auto object-contain mb-4"
+          />
+          <p class="text-sm text-slate-300 leading-7">
+            Espree Cleaning Services delivers premium residential, commercial
+            and industrial cleaning solutions with structure, speed and service
+            excellence.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-3 text-sm text-slate-300">
+            <li>
+              <a href="index.html" class="hover:text-white transition">Home</a>
+            </li>
+            <li>
+              <a href="services.html" class="hover:text-white transition"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="pricing.html" class="hover:text-white transition"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a href="about.html" class="hover:text-white transition"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a href="booking.html" class="hover:text-white transition"
+                >Book Now</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Service Focus</h4>
+          <ul class="space-y-3 text-sm text-slate-300">
+            <li>Regular Cleaning</li>
+            <li>Deep Cleaning</li>
+            <li>Industrial Cleaning</li>
+            <li>Office Cleaning</li>
+            <li>Move-In / Move-Out Cleaning</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contact</h4>
+          <div class="space-y-3 text-sm text-slate-300">
+            <p>WhatsApp: +234 708 988 6767</p>
+            <p>Call: 09064747465</p>
+            <p>Email: espree@gmail.com</p>
+            <p>Lagos, Nigeria</p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="max-w-7xl mx-auto px-8 mt-12 pt-6 border-t border-white/10 flex items-center justify-between text-sm text-slate-400"
+      >
+        <p>© 2026 Espree Cleaning Services. All Rights Reserved.</p>
+        <p>Built for premium service experiences.</p>
+      </div>
     </footer>
   </body>
 </html>

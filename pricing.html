@@ -1,34 +1,245 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <title>Pricing - Espree</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Espree Cleaning pricing plans for regular, deep and industrial cleaning services across Lagos."
+    />
+    <title>Pricing | Espree Cleaning Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body class="bg-gray-100 text-center">
-    <section class="py-20">
-      <h1 class="text-4xl font-bold mb-12">Pricing Plans</h1>
+  <body class="bg-[#f3f6fb] text-slate-900">
+    <!-- TOP BAR -->
+    <div class="bg-[#081a36] text-white text-sm border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-8 py-3 flex justify-between">
+        <span class="uppercase text-xs tracking-widest text-slate-300">
+          Tech-enabled premium cleaning solutions
+        </span>
 
-      <div class="grid md:grid-cols-3 gap-10 px-16">
-        <div class="bg-white p-10 rounded-xl shadow-lg">
-          <h3 class="text-2xl font-bold">Regular</h3>
-          <p class="mt-6 text-3xl">From ₦15,000</p>
+        <div class="flex gap-6">
+          <a
+            href="https://wa.me/2347089886767"
+            target="_blank"
+            class="text-green-400"
+          >
+            WhatsApp +234 708 988 6767
+          </a>
+          <a href="tel:09064747465">Call 09064747465</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- NAV -->
+    <nav class="sticky top-0 bg-white/80 backdrop-blur-xl border-b z-50">
+      <div
+        class="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center"
+      >
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/espree-logo.png" class="h-16" />
+          <div class="font-bold text-[#081a36]">Espree Cleaning</div>
+        </a>
+
+        <div class="flex gap-6 font-semibold">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html" class="text-[#081a36]">Pricing</a>
+          <a href="about.html">About</a>
+          <a href="terms.html">Terms</a>
+          <a
+            href="booking.html"
+            class="bg-[#081a36] text-white px-5 py-2 rounded-full"
+          >
+            Book Now
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="bg-[#081a36] text-white py-24">
+      <div class="max-w-4xl mx-auto px-8 text-center">
+        <p class="uppercase text-sm tracking-widest text-[#b8cdf4]">
+          Pricing Plans
+        </p>
+
+        <h1 class="mt-6 text-[60px] font-black leading-tight">
+          Clear pricing for
+          <span class="text-slate-300">premium cleaning services</span>
+        </h1>
+
+        <p class="mt-6 text-lg text-slate-300">
+          Choose a service category that fits your space. All bookings follow
+          our structured 70% deposit model.
+        </p>
+      </div>
+    </section>
+
+    <!-- PRICING CARDS -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-8 grid grid-cols-3 gap-8">
+        <!-- REGULAR -->
+        <div
+          class="bg-white rounded-[30px] p-10 border shadow-lg hover:shadow-xl transition"
+        >
+          <h3 class="text-2xl font-bold text-[#081a36]">Regular Cleaning</h3>
+          <p class="mt-3 text-slate-500">Best for ongoing maintenance</p>
+
+          <div class="mt-6 text-[48px] font-black text-[#081a36]">₦25,000+</div>
+
+          <ul class="mt-6 space-y-3 text-slate-600">
+            <li>✔ Dusting & surface cleaning</li>
+            <li>✔ Bathroom & kitchen upkeep</li>
+            <li>✔ Sweeping & mopping</li>
+            <li>✔ Routine maintenance</li>
+          </ul>
+
+          <a
+            href="booking.html"
+            class="mt-8 block text-center bg-[#081a36] text-white py-3 rounded-full"
+          >
+            Book Regular Cleaning
+          </a>
         </div>
 
-        <div class="bg-white p-10 rounded-xl shadow-lg">
-          <h3 class="text-2xl font-bold">Deep</h3>
-          <p class="mt-6 text-3xl">From ₦30,000</p>
+        <!-- DEEP -->
+        <div
+          class="bg-[#081a36] text-white rounded-[30px] p-10 shadow-xl scale-105"
+        >
+          <div class="text-sm uppercase tracking-widest text-[#b8cdf4]">
+            Most Popular
+          </div>
+
+          <h3 class="text-2xl font-bold mt-3">Deep Cleaning</h3>
+          <p class="mt-3 text-slate-300">For detailed, intensive cleaning</p>
+
+          <div class="mt-6 text-[48px] font-black">₦45,000+</div>
+
+          <ul class="mt-6 space-y-3 text-slate-300">
+            <li>✔ Full sanitation</li>
+            <li>✔ Hidden dirt removal</li>
+            <li>✔ Kitchen degreasing</li>
+            <li>✔ Bathroom deep clean</li>
+          </ul>
+
+          <a
+            href="booking.html"
+            class="mt-8 block text-center bg-white text-[#081a36] py-3 rounded-full font-bold"
+          >
+            Book Deep Cleaning
+          </a>
         </div>
 
-        <div class="bg-white p-10 rounded-xl shadow-lg">
-          <h3 class="text-2xl font-bold">Industrial</h3>
-          <p class="mt-6 text-3xl">From ₦80,000</p>
+        <!-- INDUSTRIAL -->
+        <div
+          class="bg-white rounded-[30px] p-10 border shadow-lg hover:shadow-xl transition"
+        >
+          <h3 class="text-2xl font-bold text-[#081a36]">Industrial Cleaning</h3>
+          <p class="mt-3 text-slate-500">For large spaces & facilities</p>
+
+          <div class="mt-6 text-[48px] font-black text-[#081a36]">
+            Custom Quote
+          </div>
+
+          <ul class="mt-6 space-y-3 text-slate-600">
+            <li>✔ Warehouse cleaning</li>
+            <li>✔ Post-construction</li>
+            <li>✔ Large facility support</li>
+            <li>✔ Tailored service plans</li>
+          </ul>
+
+          <a
+            href="booking.html"
+            class="mt-8 block text-center bg-[#081a36] text-white py-3 rounded-full"
+          >
+            Request Quote
+          </a>
         </div>
       </div>
     </section>
 
-    <footer class="bg-blue-900 text-white py-8">
-      © 2026 Espree Cleaning Services.
+    <!-- PAYMENT STRUCTURE -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-8 text-center">
+        <h2 class="text-4xl font-bold text-[#081a36]">Payment Structure</h2>
+
+        <p class="mt-6 text-lg text-slate-600">
+          All services follow our transparent payment model designed to ensure
+          commitment and service quality.
+        </p>
+
+        <div class="mt-10 grid grid-cols-2 gap-6">
+          <div class="bg-[#f3f6fb] p-8 rounded-2xl">
+            <div class="text-5xl font-black text-[#081a36]">70%</div>
+            <p class="mt-3 text-slate-600">Paid upfront to confirm booking</p>
+          </div>
+
+          <div class="bg-[#f3f6fb] p-8 rounded-2xl">
+            <div class="text-5xl font-black text-[#081a36]">30%</div>
+            <p class="mt-3 text-slate-600">Paid after service completion</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 bg-[#081a36] text-white text-center">
+      <h2 class="text-5xl font-black">Ready to get started?</h2>
+
+      <p class="mt-6 text-slate-300">
+        Choose your plan and book your cleaning service today.
+      </p>
+
+      <a
+        href="booking.html"
+        class="mt-8 inline-block bg-white text-[#081a36] px-8 py-4 rounded-full font-bold"
+      >
+        Book Now
+      </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#061224] text-white pt-16 pb-8">
+      <div class="max-w-7xl mx-auto px-8 grid grid-cols-4 gap-8">
+        <div>
+          <img src="assets/espree-logo.png" class="h-14 mb-4" />
+          <p class="text-sm text-slate-300">
+            Premium cleaning services for homes, offices and industrial spaces.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4">Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="booking.html">Book</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4">Services</h4>
+          <ul class="space-y-2 text-sm">
+            <li>Regular Cleaning</li>
+            <li>Deep Cleaning</li>
+            <li>Industrial Cleaning</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4">Contact</h4>
+          <p class="text-sm">WhatsApp: +234 708 988 6767</p>
+          <p class="text-sm">Call: 09064747465</p>
+          <p class="text-sm">Email: espree@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-10 text-sm text-slate-400">
+        © 2026 Espree Cleaning Services
+      </div>
     </footer>
   </body>
 </html>
