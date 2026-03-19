@@ -166,9 +166,31 @@
             <button
               id="submitBtn"
               type="submit"
-              class="w-full bg-[#081a36] text-white py-4 rounded-full font-bold hover:bg-[#102a57] transition"
+              class="w-full bg-[#081a36] text-white py-4 rounded-full font-bold hover:bg-[#102a57] transition flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed"
             >
-              Submit Booking
+              <svg
+                id="submitSpinner"
+                class="hidden w-5 h-5 animate-spin"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  class="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="4"
+                ></circle>
+                <path
+                  class="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                ></path>
+              </svg>
+
+              <span id="submitBtnText">Submit Booking</span>
             </button>
           </form>
 
@@ -255,13 +277,16 @@
       const successMessage = document.getElementById("successMessage");
       const errorMessage = document.getElementById("errorMessage");
       const submitBtn = document.getElementById("submitBtn");
+      const submitBtnText = document.getElementById("submitBtnText");
+      const submitSpinner = document.getElementById("submitSpinner");
 
       bookingForm.addEventListener("submit", async function (event) {
         event.preventDefault();
 
         errorMessage.classList.add("hidden");
         submitBtn.disabled = true;
-        submitBtn.textContent = "Sending...";
+        submitSpinner.classList.remove("hidden");
+        submitBtnText.textContent = "Submitting...";
 
         const bookingData = {
           fullName: document.getElementById("fullName").value,
@@ -282,23 +307,35 @@
             body: JSON.stringify(bookingData),
           });
 
-          const result = await response.json();
+          const text = await response.text();
+          let result = {};
 
-          if (response.ok) {
-            bookingForm.classList.add("hidden");
-            successMessage.classList.remove("hidden");
+          try {
+            result = JSON.parse(text);
+          } catch {
+            throw new Error(text || "Server did not return valid JSON.");
+          }
 
-            setTimeout(() => {
-              window.location.href = "payment.html";
-            }, 2000);
-          } else {
+          if (!response.ok) {
             throw new Error(result.message || "Failed to send booking.");
           }
+
+          localStorage.setItem("espreeBooking", JSON.stringify(bookingData));
+
+          bookingForm.classList.add("hidden");
+          successMessage.classList.remove("hidden");
+
+          setTimeout(() => {
+            window.location.href = "payment.html";
+          }, 2000);
         } catch (error) {
           console.error(error);
           errorMessage.classList.remove("hidden");
+          errorMessage.querySelector("p").textContent = error.message;
+
           submitBtn.disabled = false;
-          submitBtn.textContent = "Submit Booking";
+          submitSpinner.classList.add("hidden");
+          submitBtnText.textContent = "Submit Booking";
         }
       });
     </script>
