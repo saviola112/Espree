@@ -18,5 +18,8 @@
   "homepage": "https://github.com/saviola112/Espree#readme",
   "dependencies": {
     "nodemailer": "^6.9.0"
+  },
+  "devDependencies": {
+    "vercel": "^50.37.0"
   }
 }
