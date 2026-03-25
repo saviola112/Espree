@@ -70,26 +70,38 @@
           </div>
         </a>
 
-        <div
-          class="flex items-center gap-8 text-[15px] font-semibold text-slate-700"
-        >
-          <a href="index.html" class="hover:text-[#081a36] transition">Home</a>
-          <a href="services.html" class="text-[#081a36]">Services</a>
-          <a href="pricing.html" class="hover:text-[#081a36] transition"
-            >Pricing</a
-          >
-          <a href="about.html" class="hover:text-[#081a36] transition">About</a>
-          <a href="terms.html" class="hover:text-[#081a36] transition">Terms</a>
-          <a
-            href="booking.html"
-            class="bg-[#081a36] text-white px-6 py-3 rounded-full hover:bg-[#102a57] transition shadow-[0_10px_30px_rgba(8,26,54,0.18)]"
-          >
-            Book Now
-          </a>
+        <!-- DESKTOP NAV LINKS -->
+        <div class="hidden md:flex gap-6 font-semibold items-center">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html">About</a>
+          <a href="terms.html">Terms</a>
+          <a href="booking.html" class="text-[#081a36]">Book</a>
         </div>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button
+          id="menuBtn"
+          class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg border border-slate-300 text-[#081a36]"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
       </div>
     </nav>
-
+    <!-- MOBILE MENU -->
+    <div
+      id="mobileMenu"
+      class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3 font-semibold shadow-sm"
+    >
+      <a href="index.html" class="block text-[#081a36]">Home</a>
+      <a href="services.html" class="block">Services</a>
+      <a href="pricing.html" class="block">Pricing</a>
+      <a href="about.html" class="block">About</a>
+      <a href="terms.html" class="block">Terms</a>
+      <a href="booking.html" class="block text-[#081a36] font-bold">Book Now</a>
+    </div>
     <!-- HERO -->
     <section class="relative overflow-hidden bg-[#081a36] text-white">
       <div class="absolute inset-0">
@@ -465,5 +477,15 @@
         <p>Built for premium service experiences.</p>
       </div>
     </footer>
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+    </script>
   </body>
 </html>

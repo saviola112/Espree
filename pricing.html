@@ -42,22 +42,38 @@
           <div class="font-bold text-[#081a36]">Espree Cleaning</div>
         </a>
 
-        <div class="flex gap-6 font-semibold">
+        <!-- DESKTOP NAV LINKS -->
+        <div class="hidden md:flex gap-6 font-semibold items-center">
           <a href="index.html">Home</a>
           <a href="services.html">Services</a>
-          <a href="pricing.html" class="text-[#081a36]">Pricing</a>
+          <a href="pricing.html">Pricing</a>
           <a href="about.html">About</a>
           <a href="terms.html">Terms</a>
-          <a
-            href="booking.html"
-            class="bg-[#081a36] text-white px-5 py-2 rounded-full"
-          >
-            Book Now
-          </a>
+          <a href="booking.html" class="text-[#081a36]">Book</a>
         </div>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button
+          id="menuBtn"
+          class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg border border-slate-300 text-[#081a36]"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
       </div>
     </nav>
-
+    <!-- MOBILE MENU -->
+    <div
+      id="mobileMenu"
+      class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3 font-semibold shadow-sm"
+    >
+      <a href="index.html" class="block text-[#081a36]">Home</a>
+      <a href="services.html" class="block">Services</a>
+      <a href="pricing.html" class="block">Pricing</a>
+      <a href="about.html" class="block">About</a>
+      <a href="terms.html" class="block">Terms</a>
+      <a href="booking.html" class="block text-[#081a36] font-bold">Book Now</a>
+    </div>
     <!-- HERO -->
     <section class="bg-[#081a36] text-white py-24">
       <div class="max-w-4xl mx-auto px-8 text-center">
@@ -258,5 +274,15 @@
         <p>Built for premium service experiences.</p>
       </div>
     </footer>
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+    </script>
   </body>
 </html>
